@@ -194,8 +194,8 @@
 #                 server.quit()
         
 #         # Send emails to employees
-#         sender_email = "mhandatakudzwa07@gmail.com"
-#         app_password = "asro bhjv qaup gpem"  # Replace with actual app password
+#         sender_email = ""
+#         app_password = ""  # Replace with actual app password
         
 #         for _, row in df.iterrows():
 #             payslip_path = f"Payslip_{row['EMPLOYEE ID']}.pdf"
@@ -360,8 +360,8 @@ def main():
             except Exception as e:
                 print(f"Email error for {recipient_email}: {e}")
 
-        sender_email = "mhandatakudzwa07@gmail.com"
-        app_password = "asro bhjv qaup gpem"  # Make sure this is stored securely!
+        sender_email = ""
+        app_password = ""  # Make sure this is stored securely!
         for _, row in df.iterrows():
             payslip_path = os.path.join(payslips_dir, f"Payslip_{row['EMPLOYEE ID']}.pdf")
             send_payslip_email(sender_email, app_password, row['EMAIL'], payslip_path)
